@@ -13,6 +13,9 @@ public class LevelController : MonoBehaviour
     [SerializeField]
     private SkeetManager _skeetManager;
 
+    [SerializeField]
+    private GlobalUI _globalUI;
+
     private int _currentPhaseIndex = -1;
 
     private LevelPhase _currentPhase;
@@ -31,6 +34,7 @@ public class LevelController : MonoBehaviour
         {
             PlayerPrefs.SetInt("points", value);
             PlayerPrefs.Save();
+            _globalUI.SetPoints(value);
         }
     }
 
@@ -46,6 +50,7 @@ public class LevelController : MonoBehaviour
 
     private void Start()
     {
+        _globalUI.SetPoints(CountPoints);
         TriggerNextPhase();
     }
 

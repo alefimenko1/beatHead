@@ -22,7 +22,7 @@ public class SkeetManager : MonoBehaviour
 
     private GameObject _skeet;
 
-    public void SpawnSkeet()
+    public void SpawnSkeet(System.Action onEndFly)
     {
         if(_skeet != null)
         {
@@ -34,6 +34,6 @@ public class SkeetManager : MonoBehaviour
 
         _skeet = Instantiate(prefab);
         var skeetController = _skeet.GetComponent<SkeetController>();
-        skeetController.SetSettings(settings, _skeetTimeProgress, _timeFly, _typeEase);
+        skeetController.SetSettings(settings, _skeetTimeProgress, _timeFly, _typeEase, onEndFly);
     }
 }

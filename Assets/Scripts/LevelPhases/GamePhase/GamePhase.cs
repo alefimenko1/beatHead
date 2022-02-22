@@ -49,7 +49,7 @@ public class GamePhase : LevelPhase
         _progress = 0f;
         yield return base.Enter();
         _isActive = true;
-        LevelController.SkeetManager.SpawnSkeet();
+        LevelController.SkeetManager.SpawnSkeet(LevelController.TriggerNextPhase);
     }
 
     public override IEnumerator Exit()
@@ -115,7 +115,6 @@ public class GamePhase : LevelPhase
                     LevelController.CountPoints++;
                     LevelController.TriggerNextPhase();
                 }
-
             }
         }
         else

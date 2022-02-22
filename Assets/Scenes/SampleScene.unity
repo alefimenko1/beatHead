@@ -655,6 +655,7 @@ MonoBehaviour:
   - {fileID: 133143180}
   _inputManager: {fileID: 890279057}
   _skeetManager: {fileID: 982550388}
+  _globalUI: {fileID: 4544131400654672303}
 --- !u!4 &1237895972
 Transform:
   m_ObjectHideFlags: 0
@@ -1250,5 +1251,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01d4624e72a014f5d80732712f18a976, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4544131400654672303 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2376693629730787546, guid: 0f5de326fcfec4dabaf48c95b931ba1a, type: 3}
+  m_PrefabInstance: {fileID: 4544131400654672301}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92781217e7ffb40e8b2807b91c6bcbce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

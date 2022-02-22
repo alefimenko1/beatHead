@@ -17,6 +17,8 @@ public class SkeetController : MonoBehaviour
 
     private Tween _flyAnim;
 
+    private System.Action _onEndFlyAction;
+
     private void Update()
     {
         if (!_isStartTimer) return;
@@ -26,9 +28,10 @@ public class SkeetController : MonoBehaviour
         CheckTimeProgress();
     }
 
-    public void SetSettings(SkeetSpawnAndMoveSettings settings, List<SkeetTimeProgress> skeetTimeProgress, float timeFly, Ease typeEase)
+    public void SetSettings(SkeetSpawnAndMoveSettings settings, List<SkeetTimeProgress> skeetTimeProgress, float timeFly, Ease typeEase, System.Action onEndFly)
     {
         _skeetTimeProgress = skeetTimeProgress;
+        _onEndFlyAction = onEndFly;
 
         var height = Random.Range(settings.MinHeight, settings.MaxHeight);
 
@@ -54,6 +57,8 @@ public class SkeetController : MonoBehaviour
     private void EndMoveSkeet()
     {
         _isStartTimer = false;
+        _onEndFlyAction?.Invoke();
+        Destroy();
     }
 
     public void Destroy()
