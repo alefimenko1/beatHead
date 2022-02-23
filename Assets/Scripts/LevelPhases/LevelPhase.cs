@@ -18,6 +18,7 @@ public abstract class LevelPhase : MonoBehaviour
     {
         if (LevelPhaseUI != null)
         {
+            LevelPhaseUI.Reset();
             LevelPhaseUI.DisableUIWithOutAnimation();
         }
     }

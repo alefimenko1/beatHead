@@ -9,16 +9,11 @@ public abstract class LevelPhaseUI : MonoBehaviour
     [SerializeField]
     private float _timeAnimate = 0.5f;
 
+    [SerializeField]
     private CanvasGroup _canvasGroup;
-
-    private void Awake()
-    {
-        _canvasGroup = GetComponent<CanvasGroup>();
-    }
 
     public virtual void Reset()
     {
-
     }
 
     public IEnumerator EnableUI()
@@ -37,10 +32,6 @@ public abstract class LevelPhaseUI : MonoBehaviour
 
     public void DisableUIWithOutAnimation()
     {
-        if(_canvasGroup == null)
-        {
-            _canvasGroup = GetComponent<CanvasGroup>();
-        }
         _canvasGroup.blocksRaycasts = false;
         _canvasGroup.alpha = 0f;
     }

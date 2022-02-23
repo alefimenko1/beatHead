@@ -73,6 +73,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeAnimate: 0.5
+  _canvasGroup: {fileID: 102562278}
   _progressImage: {fileID: 3835249286775555164}
 --- !u!1 &279344314
 GameObject:
@@ -601,6 +602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeAnimate: 0.5
+  _canvasGroup: {fileID: 1580443741419626848}
   _playButton: {fileID: 357493067442293196}
 --- !u!1 &6699268515210742044
 GameObject:
