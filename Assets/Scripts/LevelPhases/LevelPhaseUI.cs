@@ -37,6 +37,10 @@ public abstract class LevelPhaseUI : MonoBehaviour
 
     public void DisableUIWithOutAnimation()
     {
+        if(_canvasGroup == null)
+        {
+            _canvasGroup = GetComponent<CanvasGroup>();
+        }
         _canvasGroup.blocksRaycasts = false;
         _canvasGroup.alpha = 0f;
     }
